@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocify - Your Grocery Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .product-category {
+            margin: 20px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .product-category h2 {
+            color: #007bff;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #007bff;
+        }
+        .product img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .placeholder-img {
+            background: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Grocify - Your Grocery Store</h1>
+        <div class="auth-buttons">
+            <a href="history.html" class="history-btn">�� Order History</a>
+        </div>
+    </header>
+
+    <main class="product-container">
+        <!-- Fruits Section -->
+        <div class="product-category">
+            <h2>🍎 Fruits</h2>
+            <div class="product" data-name="Apples" data-price="50">
+                <img src="./images/apples.png.jpg" alt="Apples">
+                <h3>Apples</h3>
+                <p>₹50 per kg</p>
+                <button onclick="addToCart('Apples', 50)">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Bananas" data-price="40">
+                <img src="./images/bananas.png.jpeg" alt="Bananas">
+                <h3>Bananas</h3>
+                <p>₹40 per dozen</p>
+                <button onclick="addToCart('Bananas', 40)">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Oranges" data-price="60">
+                <img src="./images/oranges.png.jpeg" alt="Oranges">
+                <h3>Oranges</h3>
+                <p>₹60 per kg</p>
+                <button onclick="addToCart('Oranges', 60)">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Grapes" data-price="80">
+                <img src="./images/grapes.png" alt="Grapes">
+                <h3>Grapes</h3>
+                <p>₹80 per kg</p>
+                <button onclick="addToCart('Grapes', 80)">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Dairy Section -->
+        <div class="product-category">
+            <h2>🥛 Dairy</h2>
+            <div class="product" data-name="Milk" data-price="60">
+                <img src="./images/milk.png.jpeg" alt="Milk">
+                <h3>Milk</h3>
+                <p>₹60 per liter</p>
+                <button onclick="addToCart('Milk', 60)">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Cheese" data-price="120">
+                <img src="./images/cheese.png" alt="Cheese">
+                <h3>Cheese</h3>
+                <p>₹120 per pack</p>
+                <button onclick="addToCart('Cheese', 120)">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Yogurt" data-price="45">
+                <img src="./images/yogurt.png" alt="Yogurt">
+                <h3>Yogurt</h3>
+                <p>₹45 per cup</p>
+                <button onclick="addToCart('Yogurt', 45)">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Butter" data-price="100">
+                <img src="./images/butter.png" alt="Butter">
+                <h3>Butter</h3>
+                <p>₹100 per pack</p>
+                <button onclick="addToCart('Butter', 100)">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Vegetables Section -->
+        <div class="product-category">
+            <h2>🥦 Vegetables</h2>
+            <div class="product" data-name="Tomatoes" data-price="40">
+                <img src="./images/tomatoes.png.jpeg" alt="Tomatoes">
+                <h3>Tomatoes</h3>
+                <p>₹40 per kg</p>
+                <button onclick="addToCart('Tomatoes', 40)">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Potatoes" data-price="30">
+                <img src="./images/potatoes.png.jpeg" alt="Potatoes">
+                <h3>Potatoes</h3>
+                <p>₹30 per kg</p>
+                <button onclick="addToCart('Potatoes', 30)">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Onions" data-price="35">
+                <img src="./images/onions.png" alt="Onions">
+                <h3>Onions</h3>
+                <p>₹35 per kg</p>
+                <button onclick="addToCart('Onions', 35)">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Carrots" data-price="45">
+                <img src="./images/carrots.png" alt="Carrots">
+                <h3>Carrots</h3>
+                <p>₹45 per kg</p>
+                <button onclick="addToCart('Carrots', 45)">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Pantry Section -->
+        <div class="product-category">
+            <h2>🍚 Pantry</h2>
+            <div class="product" data-name="Rice" data-price="80">
+                <img src="./images/rice.png" alt="Rice">
+                <h3>Rice</h3>
+                <p>₹80 per kg</p>
+                <button onclick="addToCart('Rice', 80)">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Wheat Flour" data-price="45">
+                <img src="./images/flour.png" alt="Wheat Flour">
+                <h3>Wheat Flour</h3>
+                <p>₹45 per kg</p>
+                <button onclick="addToCart('Wheat Flour', 45)">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Sugar" data-price="50">
+                <img src="./images/sugar.png" alt="Sugar">
+                <h3>Sugar</h3>
+                <p>₹50 per kg</p>
+                <button onclick="addToCart('Sugar', 50)">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Salt" data-price="20">
+                <img src="./images/salt.png" alt="Salt">
+                <h3>Salt</h3>
+                <p>₹20 per kg</p>
+                <button onclick="addToCart('Salt', 20)">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Beverages Section -->
+        <div class="product-category">
+            <h2>🥤 Beverages</h2>
+            <div class="product" data-name="Mineral Water" data-price="20">
+                <img src="./images/water.png" alt="Mineral Water">
+                <h3>Mineral Water</h3>
+                <p>₹20 per bottle</p>
+                <button onclick="addToCart('Mineral Water', 20)">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Orange Juice" data-price="90">
+                <img src="./images/juice.png" alt="Orange Juice">
+                <h3>Orange Juice</h3>
+                <p>₹90 per liter</p>
+                <button onclick="addToCart('Orange Juice', 90)">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Tea Bags" data-price="150">
+                <img src="./images/tea.png" alt="Tea Bags">
+                <h3>Tea Bags</h3>
+                <p>₹150 per pack</p>
+                <button onclick="addToCart('Tea Bags', 150)">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Coffee" data-price="200">
+                <img src="./images/coffee.png" alt="Coffee">
+                <h3>Coffee</h3>
+                <p>₹200 per pack</p>
+                <button onclick="addToCart('Coffee', 200)">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <aside class="cart">
+        <h2>🛒 Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: ₹0</p>
+        <button onclick="checkout()">Checkout</button>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
